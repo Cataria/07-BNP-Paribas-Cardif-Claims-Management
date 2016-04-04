@@ -165,7 +165,7 @@ def exec_model(estimator, X, y, folds, **kw):
 '''*****************************************************************'''
 '''************************parameter tuning*************************'''
 '''*****************************************************************'''
-#just some samples here
+#just some samples here, there's a detailed log @ data_transform/cv_info.csv 
 #one group of parameters may take 30~120 minutes
 #the actual time can be found at data_transform/cv_info.csv
 for depth in [10, 20, 30, 40, 50, 60]:
