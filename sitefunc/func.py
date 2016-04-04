@@ -126,12 +126,13 @@ def rank_match(col1, col2):
     rank_match_rate = compute_pearsonr(rank1, rank2)
     return rank_match_rate
     
+'''
 def scaled_distance(col):
     sorted_col = col.dropna().sort_values().round(8)
     rolling_distance = sorted_col.rolling(window=2).apply(lambda x: x[1]-x[0])
     rolling_distance = rolling_distance[rolling_distance>0.000003]
     return round(rolling_distance.mode().values[0], 8)
-    
+''' 
     
     
     
