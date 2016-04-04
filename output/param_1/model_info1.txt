@@ -1,0 +1,36 @@
+preprocess:
+1. add logistic feature (top 200 correlated categorical featrues)
+2. factorize categorical features and set NaN -9999
+3. v50 = v50 ** 0.125, also set NaN -9999 for numeric fetures
+4. drop v8, v25, v46, v54, v63, v89, v107, v79, v75, v110
+
+yetc_3000 : LB score = 0.45264
+etc = ExtraTreesClassifier(n_estimators=3000, max_depth=30, min_samples_leaf=2, verbose=True,
+                           criterion='entropy', max_features=0.55, random_state=9527)
+
+yetc_3000_gini : 
+etc = ExtraTreesClassifier(n_estimators=3000, max_depth=30, min_samples_leaf=2, verbose=True,
+                           criterion='gini', max_features=0.55, random_state=9527)
+
+yetr_3000 : 
+etr = ExtraTreesRegressor(n_estimators=3000, max_depth=30, min_samples_leaf=2, verbose=True,
+                          criterion='mse', max_features=0.55, random_state=9527)
+
+ygbc_1100 : LB score = 0.45978
+gbc = XGBClassifier(n_estimators=1100, max_depth=10, min_child_weight=2, learning_rate=0.01, 
+                    silent=False, subsample=0.85, colsample_bytree=0.5, base_score=0.76, seed=9527)
+
+
+ygbr_1100 : LB score = 0.46261
+gbr = XGBRegressor(n_estimators=1100, max_depth=10, min_child_weight=2, learning_rate=0.01, 
+                   silent=False, subsample=0.85, colsample_bytree=0.5, base_score=0.76, seed=9527)
+
+
+yrfc_1000 : LB_score = 0.46257
+rfc = RandomForestClassifier(n_estimators=1000, max_depth=20, min_samples_leaf=5, verbose=True,
+                             criterion='entropy', max_features=0.5, random_state=9527)
+
+
+yrfr_1000 : 
+rfr = RandomForestRegressor(n_estimators=1000, max_depth=20, min_samples_leaf=20, verbose=True,
+                            criterion='mse', max_features=0.5, random_state=9527)

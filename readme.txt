@@ -1,4 +1,18 @@
-Git is a distributed version control system.
-Git is free software distributed under the GPL
-Git has a mutable index called stage.
-Git tracks changes.
+BNP Paribas Cardif Claims Management
+
+Competition Details:
+https://www.kaggle.com/c/bnp-paribas-cardif-claims-management
+
+Folders:
+data_transform:		some data information & total data after preprocessing
+output:			predict of P(y==1) from different models
+data:			original data, can get it from
+https://www.kaggle.com/c/bnp-paribas-cardif-claims-management/data
+
+
+Flies:
+pre_explore.py: 	a first glance at the data
+pre_procecess.py:	data transform, feature engineering
+cross_validation.py:	tuning parameters by grid search
+predict.py:		model training and predicting
+ensemble.py:		model ensembling

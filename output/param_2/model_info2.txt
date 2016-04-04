@@ -1,0 +1,51 @@
+preprocess:
+1. fill group4's NaN with median()
+2. use pca(k=2) fit v8, v25, v46, v54, v63, v89, v105, save the 2 new features and drop the old ones
+3. drop v76, v64, v60, v95, v43, v121, v33, v97, v118, v29, v41, v53, v73
+4. drop v22, v107, v110, combine v71 & v75
+5. factorize categorical features
+6. set all other NaNs -9999
+
+yet : LB score = 0.45843
+et = ExtraTreesClassifier(n_estimators=1200, criterion='entropy', max_depth=30, 
+                          min_samples_leaf=2, min_samples_split=3, max_features=0.5, 
+                          n_jobs=1, random_state=9527, verbose=True, warm_start=True)
+
+yet2 : LB score = 0.45826
+et2 = ExtraTreesClassifier(n_estimators=3000, criterion='entropy', max_depth=35, 
+                          min_samples_leaf=2, min_samples_split=3, max_features=0.5, 
+                          n_jobs=1, random_state=9527, verbose=True, warm_start=True)
+
+yet4 : LB score = 0.45502
+unrecorded
+
+yetr :
+etr = ExtraTreesRegressor(n_estimators=1200, criterion='mse', max_depth=30, 
+                          min_samples_leaf=2, min_samples_split=3, max_features=0.5, 
+                          n_jobs=1, random_state=9527, verbose=True, warm_start=True)
+
+yetr2 :
+etr2 = ExtraTreesRegressor(n_estimators=3000, criterion='mse', max_depth=35, 
+                          min_samples_leaf=2, min_samples_split=3, max_features=0.5, 
+                          n_jobs=1, random_state=9527, verbose=True, warm_start=True)
+
+yrf : LB score = 0.46223
+rf = RandomForestClassifier(n_estimators=600, criterion='entropy', max_depth=20,
+                            min_samples_leaf=5, min_samples_split=9, max_features=0.5,
+                            n_jobs=1, random_state=9527, verbose=True, warm_start=True)
+
+yrfr : LB score = 0.46720
+rfr = RandomForestRegressor(n_estimators=600, criterion='mse', max_depth=20, 
+                            min_samples_leaf=39, min_samples_split=20, max_features=0.5, 
+                            n_jobs=1, random_state=9527, verbose=True, warm_start=True)
+
+yxgbc : LB score = 0.45836
+xgbc = xgb.XGBClassifier(max_depth=10, learning_rate=0.01, n_estimators=1100, 
+                         silent=False, min_child_weight=2, subsample=0.85, 
+                         colsample_bytree=0.5, base_score=0.76, seed=9527)
+
+yxgbr :
+xgbr = xgb.XGBRegressor(max_depth=10, learning_rate=0.01, n_estimators=1100, 
+                        silent=False, min_child_weight=2, subsample=0.85, 
+                        colsample_bytree=0.5, base_score=0.76, seed=9527)
+
