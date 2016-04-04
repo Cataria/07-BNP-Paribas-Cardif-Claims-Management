@@ -181,9 +181,7 @@ for depth in [10, 20, 30, 40, 50, 60]:
         exec_model(gbc, X.drop(['ID', 'target'], axis=1), y, 5)
     
 
-
-
-
+''''''
 
 
 

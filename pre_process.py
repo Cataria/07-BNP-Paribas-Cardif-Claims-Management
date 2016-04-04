@@ -67,9 +67,7 @@ tot.to_csv('data_transform/tot.csv', index=False)
 
 
 
-
-
-
+''''''
 
 
 

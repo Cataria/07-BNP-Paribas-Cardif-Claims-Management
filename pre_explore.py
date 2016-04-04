@@ -304,3 +304,5 @@ data_info['groupd'] = list(groupd)
 data_info['groupc'] = cat_feat
 data_info = pd.DataFrame(data_info, columns=['info'])
 data_info.to_csv('data_transform/data_info.csv')
+
+''''''
