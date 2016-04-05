@@ -4,7 +4,7 @@ Competition Details:
 https://www.kaggle.com/c/bnp-paribas-cardif-claims-management
 
 Folders:
-data_transform:		data information / preprocessed data
+data_transform:		data info / cv info/ preprocessed data
 output:			prediction of P(y==1) from different models
 data:			original data, can get it from
 https://www.kaggle.com/c/bnp-paribas-cardif-claims-management/data
